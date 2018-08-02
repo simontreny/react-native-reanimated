@@ -186,6 +186,7 @@ export default function createAnimatedComponent(Component) {
           {...props}
           ref={ref => (this._component = ref)}
           collapsable={false}
+          children={this.props.children}
         />
       );
     }
