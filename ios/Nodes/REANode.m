@@ -131,12 +131,12 @@ RCT_NOT_IMPLEMENTED(- (instancetype)init)
               withVisitedSet:visitedNodes
               withFinalNodes:finalNodes];
   }
+  [context.updatedNodes removeAllObjects];
   while (finalNodes.count > 0) {
     // NSMutableArray used for stack implementation
     [[finalNodes lastObject] update];
     [finalNodes removeLastObject];
   }
-  [context.updatedNodes removeAllObjects];
   context.loopID++;
 }
 

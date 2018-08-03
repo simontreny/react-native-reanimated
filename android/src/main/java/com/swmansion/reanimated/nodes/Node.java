@@ -119,10 +119,10 @@ public abstract class Node<T> {
     for (int i = 0; i < updatedNodes.size(); i++) {
       findAndUpdateNodes(updatedNodes.valueAt(i), new HashSet<Node>(), finalNodes);
     }
+    updatedNodes.clear();
     while (!finalNodes.isEmpty()) {
       finalNodes.pop().update();
     }
-    updatedNodes.clear();
     updateContext.updateLoopID++;
   }
 }
