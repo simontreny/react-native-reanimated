@@ -184,10 +184,7 @@ declare module 'react-native-reanimated' {
       callback: (values: ReadonlyArray<T>) => void
     ): AnimatedNode<0>;
     debug<T>(message: string, value: Adaptable<T>): AnimatedNode<T>;
-    onChange(
-      value: Adaptable<any>,
-      action: Adaptable<any>
-    ): AnimatedNode<undefined>;
+    onChange<T>(value: Adaptable<any>, action: Adaptable<T>): AnimatedNode<T>;
     startClock(clock: AnimatedClock): AnimatedNode<0>;
     always(item: AnimatedNode<any>): AnimatedNode<0>;
     stopClock(clock: AnimatedClock): AnimatedNode<0>;
